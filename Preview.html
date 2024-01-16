@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/index.htmldiv.preview -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+
+    <script async="" data-id="five-server" data-file="${filePath}" type="application/javascript" src="./Preview_files/fiveserver.js.download"></script>
+
+    <link rel="stylesheet" href="./Preview_files/vs.min.css">
+    <script src="./Preview_files/highlight.min.js.download"></script>
+
+    <link rel="stylesheet" href="./Preview_files/directory.css">
+  <style>      
+      /* Injected by five-server */
+      /*[data-highlight="true"] {
+        border: 1px rgb(90,170,255) solid !important;
+        background-color: rgba(155,215,255,0.5);
+        animation: fadeOutHighlight 1s forwards 0.5s;
+      }
+      img[data-highlight="true"] {
+        filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+        animation: fadeOutHighlightIMG 0.5s forwards 0.5s;
+      }*/
+      @keyframes fadeOutHighlight {
+        from {background-color: rgba(155,215,255,0.5);}
+        to {background-color: rgba(155,215,255,0);}
+      }      
+      @keyframes fadeOutHighlightIMG {
+        0% {filter: sepia(100%) hue-rotate(180deg) saturate(200%);}
+        33% {filter: sepia(66%) hue-rotate(180deg) saturate(100%);}
+        50% {filter: sepia(50%) hue-rotate(90deg) saturate(50%);}
+        66% {filter: sepia(33%) hue-rotate(0deg) saturate(100%);}
+        100% {filter: sepia(0%) hue-rotate(0deg) saturate(100%);}
+      }
+      @keyframes fiveserverInfoPopup {
+        0%   {top:-40px;}
+        15%  {top:4px;}
+        85%  {top:4px;}
+        100% {top:-40px;}
+      }
+      /*smaller*/
+      @media (max-width: 640px) {
+        #fiveserver-info-wrapper {
+          max-width: 98%;
+        }
+        #fiveserver-info {
+          border-radius: 0px;
+        }      
+      }
+
+      </style></head>
+  <body>
+    <div id="wrapper">
+      <div class="directory">
+        <h1>
+          <a href="http://127.0.0.1:5500/">~</a> / <a href="http://127.0.0.1:5500/index.htmldiv">index.htmldiv</a><small style="margin-left: 12px">
+            <a href="http://127.0.0.1:5500/index.htmldiv.fullscreen">[fullscreen]</a>
+          </small>
+        </h1>
+
+        
+
+        <div class="preview">
+            <div>
+            <pre margin="0px;" class="language-txt"><code class="hljs plaintext">&lt;DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Home page&lt;/title&gt;
+&lt;style type="text/css"&gt;
+.main{
+    width:1000px
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="main"&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div></div>
+      </div>
+
+      <div class="footer">
+        <p>Preview Developed by <a href="https://github.com/yandeu">@yandeu</a></p>
+      </div>
+    </div>
+
+    <script>
+      let fileName = "index.";
+      let ext = "htmldiv";
+      let lang = hljs.getLanguage(ext);
+
+      if (lang && lang.aliases && typeof lang.aliases[0] === "string") {
+        lang = lang.aliases[0];
+      } else if (lang && lang.name) {
+        if (/,/gm.test(lang.name)) {
+          lang.name = lang.name.split(",")[0];
+        }
+        ext = lang.name.toLowerCase();
+      } else {
+        ext = "txt";
+      }
+
+      const pre = document.querySelector("pre");
+      if (pre) {
+        console.log("language-" + ext);
+        pre.classList.add("language-" + ext);
+        hljs.highlightAll();
+      }
+    </script>
+  
+
+</body></html>
